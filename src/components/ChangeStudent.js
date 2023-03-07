@@ -77,7 +77,7 @@ const handleSubmit = async(e)=>{
         const { message, statusCode } = data;
         if (statusCode === 200) {
           toast.success(message);
-          navigate("/")
+          navigate("/dashboard")
         } else {
             toast.warn(message);
         }

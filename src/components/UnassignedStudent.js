@@ -44,17 +44,17 @@ function UnassignedStudent() {
                 </tr>
               </thead>
               <tbody>
-                {
-                  studentData.length > 0 && studentData.map((item, index) => {
-                    return <tr>
-                      <td>{index + 1}</td>
-                      <td>{item.firstName} {item.lastName}</td>
-                      <td>{item.email}</td>
-                      <td>{item.mobile}</td>
-                    </tr>
-                  })
-                }
-
+{
+  studentData.length === 0 && studentData ? <tr className='text-danger'>No unassigned student</tr> :
+  studentData.length > 0 && studentData.map((item, index) => {
+    return <tr>
+      <td>{index + 1}</td>
+      <td>{item.firstName} {item.lastName}</td>
+      <td>{item.email}</td>
+      <td>{item.mobile}</td>
+    </tr>
+  })
+}
               </tbody>
             </Table>
         }

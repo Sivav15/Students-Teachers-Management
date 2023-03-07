@@ -67,19 +67,19 @@ function StudentDetails() {
               </tr>
             </thead>
             <tbody>
-              {
-                studentData.length > 0 && studentData.map((item, index) => {
-                  return <tr>
-                    <td>{index + 1}</td>
-                    <td>{item.firstName} {item.lastName}</td>
-                    <td>{item.email}</td>
-                    <td>{item.mobile}</td>
-                    <td>{item.mentorAssigned !== "unAssigned" ? (`${item.mentorAssigned.firstName} ${item.mentorAssigned.lastName}`) : (item.mentorAssigned)}</td>
-                    <td> <img src="./asset/delete.png" alt="delete" className='w' onClick={() => handleDelete(item._id)} /></td>
-                  </tr>
-                })
-              }
-
+{
+    studentData.length === 0 && studentData ? <tr className='text-danger'>No student created</tr> :
+    studentData.length > 0 && studentData.map((item, index) => {
+      return <tr>
+        <td>{index + 1}</td>
+        <td>{item.firstName} {item.lastName}</td>
+        <td>{item.email}</td>
+        <td>{item.mobile}</td>
+        <td>{item.mentorAssigned !== "unAssigned" ? (`${item.mentorAssigned.firstName} ${item.mentorAssigned.lastName}`) : (item.mentorAssigned)}</td>
+        <td> <img src="./asset/delete.png" alt="delete" className='w' onClick={() => handleDelete(item._id)} /></td>
+      </tr>
+    })
+}
             </tbody>
           </Table>
         }

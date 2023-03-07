@@ -52,7 +52,7 @@ function CreateStudent() {
         const { data } = user;
         const { message, statusCode } = data;
         if (statusCode === 201) {
-          navigate("/")
+          navigate("/dashboard")
           toast.success(message);
         } else {
             toast.warn(message);

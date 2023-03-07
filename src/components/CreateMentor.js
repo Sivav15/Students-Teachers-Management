@@ -54,7 +54,7 @@ let navigate = useNavigate()
         const { message, statusCode } = data;
         if (statusCode === 201) {
           toast.success(message);
-          navigate("/mentor-details")
+          navigate("/dashboard/mentor-details")
         } else {
             toast.warn(message);
         }
