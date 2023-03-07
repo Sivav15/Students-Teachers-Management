@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink, Outlet ,useNavigate} from 'react-router-dom'
+import { NavLink, Outlet} from 'react-router-dom'
 function DashBoard() {
     let [change,setChange] = useState(true);
     const navLinkStyle = { color: ' white' , backgroundColor : "green", padding : "7px" ,  borderRadius : "4px"}
