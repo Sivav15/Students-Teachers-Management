@@ -1,7 +1,6 @@
 import React from 'react'
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AssignStudent from './components/AssignStudent';
 import ChangeStudent from './components/ChangeStudent';
 import CreateMentor from './components/CreateMentor';
 import CreateStudent from './components/CreateStudent';
@@ -20,11 +19,10 @@ function App() {
           <Routes>
             <Route path="/create-student" element={<CreateStudent />} />
             <Route path="/create-mentor" element={<CreateMentor />} />
-            <Route path="/assign-student" element={<AssignStudent />} >
-              <Route index element={<AssignStud />} />
+            <Route path="/assign-student" element={<AssignStud />} />
               <Route path="change-student" element={<ChangeStudent />} />
-            </Route>
-            <Route path="/" element={<DashBoard />} >
+            
+            <Route path="/dashboard" element={<DashBoard />} >
               <Route index element={<StudentDetails />} />
               <Route path="mentor-details" element={<MentorDetails />} />
               <Route path="unassigned-student" element={<UnassignedStudent />} />
