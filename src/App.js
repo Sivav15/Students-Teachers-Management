@@ -28,9 +28,9 @@ function App() {
               <Route path="unassigned-student" element={<UnassignedStudent />} />
             </Route>
           </Routes>
-          {
+          {/* {
             <Navigate to="/dashboard" replace={true} />
-          }
+          } */}
         </div>
       </BrowserRouter>
     </>
