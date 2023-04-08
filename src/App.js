@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ChangeStudent from './components/ChangeStudent';
 import CreateMentor from './components/CreateMentor';
 import CreateStudent from './components/CreateStudent';
@@ -28,6 +28,9 @@ function App() {
               <Route path="unassigned-student" element={<UnassignedStudent />} />
             </Route>
           </Routes>
+          {
+            <Navigate to="/dashboard" replace={true} />
+          }
         </div>
       </BrowserRouter>
     </>
